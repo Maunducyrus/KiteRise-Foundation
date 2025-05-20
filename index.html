@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiteRise Children's Foundation | Helping Children Soar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --secondary-gold: #f59e0b;
+            --accent-green: #10b981;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1503454537195-29dc400eb59b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .kite-float {
+            animation: kiteFloat 6s ease-in-out infinite alternate;
+        }
+        
+        @keyframes kiteFloat {
+            0% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            100% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .program-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="h-10 w-10 kite-float" src="https://img.icons8.com/color/96/kite.png" alt="KiteRise Logo">
+                        <span class="ml-2 text-xl font-bold text-blue-500">KiteRise</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home" class="text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="text-gray-700 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="#programs" class="text-gray-700 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium">Our Programs</a>
+                        <a href="#get-involved" class="text-gray-700 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium">Get Involved</a>
+                        <a href="#donate" class="text-gray-700 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium">Donate</a>
+                        <a href="#contact" class="text-gray-700 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700">About Us</a>
+                <a href="#programs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700">Our Programs</a>
+                <a href="#get-involved" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700">Get Involved</a>
+                <a href="#donate" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700">Donate</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg flex items-center justify-center text-white fade-in">
+        <div class="text-center px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Helping Children Soar</h1>
+            <p class="text-xl md:text-2xl mb-8">Empowering vulnerable children to rise above adversity through education, mentorship, and community support.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#donate" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Donate Now</a>
+                <a href="#get-involved" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Volunteer</a>
+                <a href="#programs" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="py-12 bg-gradient-to-r from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <div class="text-gray-600">Children Supported</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-yellow-500 mb-2">120</div>
+                    <div class="text-gray-600">Scholarships Awarded</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-green-500 mb-2">50+</div>
+                    <div class="text-gray-600">Volunteers</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-400 mb-2">15</div>
+                    <div class="text-gray-600">Communities Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">About KiteRise</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Children with kites" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">To empower vulnerable children to rise above adversity through comprehensive support programs that address their educational, emotional, and social needs, helping them reach their full potential.</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Vision</h3>
+                    <p class="text-gray-600 mb-6">A world where every child, regardless of their circumstances, has the opportunity to soar to new heights and achieve their dreams.</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Why "KiteRise"?</h3>
+                    <p class="text-gray-600">Just as a kite needs wind to rise, children need support to reach their potential. Our name symbolizes the uplifting power of community and the boundless possibilities when children are given the right conditions to thrive.</p>
+                </div>
+            </div>
+            
+            <!-- Core Values -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Our Core Values</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <div class="text-blue-600 text-4xl mb-4"><i class="fas fa-heart"></i></div>
+                        <h4 class="font-bold text-lg mb-2">Compassion</h4>
+                        <p class="text-gray-600">We approach every child with empathy and understanding.</p>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-lg text-center">
+                        <div class="text-yellow-500 text-4xl mb-4"><i class="fas fa-lock-open"></i></div>
+                        <h4 class="font-bold text-lg mb-2">Empowerment</h4>
+                        <p class="text-gray-600">We provide tools for children to take control of their futures.</p>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg text-center">
+                        <div class="text-green-500 text-4xl mb-4"><i class="fas fa-hands-helping"></i></div>
+                        <h4 class="font-bold text-lg mb-2">Community</h4>
+                        <p class="text-gray-600">We believe in the power of collective action for change.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Founder's Message -->
+            <div class="mt-20 bg-gray-50 p-8 rounded-lg">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 md:pr-8">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Founder" class="rounded-full w-48 h-48 object-cover mx-auto">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Message From Our Founder</h3>
+                        <blockquote class="text-gray-600 italic mb-4">
+                            "Every child deserves the chance to rise above their circumstances, just like a kite soaring in the sky. At KiteRise, we're not just providing assistance - we're creating opportunities for transformation. I've seen firsthand how the right support at the right time can change a child's trajectory forever."
+                        </blockquote>
+                        <p class="font-semibold text-gray-700">- Sarah Johnson, Founder & Executive Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Programs -->
+    <section id="programs" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Programs</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-gray-500">We address the holistic needs of children through four key pillars of support.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Elevate -->
+                <div class="program-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-blue-600 text-5xl mb-4"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Elevate</h3>
+                    <h4 class="text-lg font-semibold text-blue-600 mb-4">Education & Skills</h4>
+                    <p class="text-gray-600 mb-4">Providing scholarships, tutoring, and vocational training to help children achieve academic success.</p>
+                    <div class="bg-blue-50 p-3 rounded-lg mb-4">
+                        <p class="text-sm text-blue-800"><i class="fas fa-quote-left mr-1"></i> Thanks to KiteRise, I'm the first in my family to attend university. They believed in me when no one else did.</p>
+                    </div>
+                    <a href="#get-involved" class="text-blue-600 font-medium inline-flex items-center">Support this program <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                
+                <!-- Nurture -->
+                <div class="program-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-yellow-500 text-5xl mb-4"><i class="fas fa-heart"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Nurture</h3>
+                    <h4 class="text-lg font-semibold text-yellow-500 mb-4">Mental Health & Mentorship</h4>
+                    <p class="text-gray-600 mb-4">Counseling services and mentorship programs to support emotional wellbeing and personal growth.</p>
+                    <div class="bg-yellow-50 p-3 rounded-lg mb-4">
+                        <p class="text-sm text-yellow-800"><i class="fas fa-quote-left mr-1"></i> My mentor helped me see my worth and potential. Now I want to help others the same way.</p>
+                    </div>
+                    <a href="#get-involved" class="text-yellow-600 font-medium inline-flex items-center">Become a mentor <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                
+                <!-- Unshackle -->
+                <div class="program-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-green-500 text-5xl mb-4"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Unshackle</h3>
+                    <h4 class="text-lg font-semibold text-green-500 mb-4">Legal & Community Advocacy</h4>
+                    <p class="text-gray-600 mb-4">Legal aid, foster care support, and community outreach to protect children's rights.</p>
+                    <div class="bg-green-50 p-3 rounded-lg mb-4">
+                        <p class="text-sm text-green-800"><i class="fas fa-quote-left mr-1"></i> KiteRise's legal team helped reunite me with my siblings after years in the system.</p>
+                    </div>
+                    <a href="#get-involved" class="text-green-600 font-medium inline-flex items-center">Join our advocacy <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                
+                <!-- Celebrate -->
+                <div class="program-card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-purple-500 text-5xl mb-4"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Celebrate</h3>
+                    <h4 class="text-lg font-semibold text-purple-500 mb-4">Arts, Sports & Play</h4>
+                    <p class="text-gray-600 mb-4">Recreational activities that foster creativity, teamwork, and the simple joy of childhood.</p>
+                    <div class="bg-purple-50 p-3 rounded-lg mb-4">
+                        <p class="text-sm text-purple-800"><i class="fas fa-quote-left mr-1"></i> I never thought I could be an artist until KiteRise gave me paints and encouragement.</p>
+                    </div>
+                    <a href="#get-involved" class="text-purple-600 font-medium inline-flex items-center">Sponsor activities <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#get-involved" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    See All Ways to Get Involved
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section id="get-involved" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Get Involved</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-gray-500">Join us in making a difference in children's lives. Every contribution matters.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Volunteer -->
+                <div class="bg-blue-50 rounded-lg overflow-hidden shadow-lg">
+                    <div class="bg-blue-600 p-4 text-white">
+                        <h3 class="text-xl font-bold"><i class="fas fa-hands-helping mr-2"></i> Volunteer</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Share your time and talents to directly impact children's lives. We need mentors, tutors, event helpers, and more.</p>
+                        <ul class="mb-6 space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Mentorship programs (6+ month commitment)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>After-school tutoring</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Event volunteers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                                <span>Professional skills workshops</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Volunteer Application
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Donate -->
+                <div class="bg-yellow-50 rounded-lg overflow-hidden shadow-lg">
+                    <div class="bg-yellow-500 p-4 text-white">
+                        <h3 class="text-xl font-bold"><i class="fas fa-donate mr-2"></i> Donate</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Your financial support funds our programs and changes lives. Every dollar makes a difference.</p>
+                        <ul class="mb-6 space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>One-time or monthly donations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Sponsor a child's education</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Fund a program or initiative</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2"></i>
+                                <span>Corporate matching programs</span>
+                            </li>
+                        </ul>
+                        <a href="#donate" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded text-center transition duration-300">
+                            Donate Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Partner -->
+                <div class="bg-green-50 rounded-lg overflow-hidden shadow-lg">
+                    <div class="bg-green-500 p-4 text-white">
+                        <h3 class="text-xl font-bold"><i class="fas fa-handshake mr-2"></i> Partner</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Businesses, schools, and organizations can partner with us to create lasting change.</p>
+                        <ul class="mb-6 space-y-2 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Corporate sponsorships</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>In-kind donations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Employee volunteer programs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>School and community drives</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                            Partnership Inquiry
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fundraising Ideas -->
+            <div class="mt-16 bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Fundraising Ideas</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-blue-500 text-3xl mb-3"><i class="fas fa-umbrella-beach"></i></div>
+                        <h4 class="font-bold text-lg mb-2">Kite Festival</h4>
+                        <p class="text-gray-600">Host a community kite flying event with entry fees going to KiteRise.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-yellow-500 text-3xl mb-3"><i class="fas fa-running"></i></div>
+                        <h4 class="font-bold text-lg mb-2">Fun Run</h4>
+                        <p class="text-gray-600">Organize a 5K where participants raise pledges for each mile completed.</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="text-green-500 text-3xl mb-3"><i class="fas fa-book"></i></div>
+                        <h4 class="font-bold text-lg mb-2">Book Drive</h4>
+                        <p class="text-gray-600">Collect new or gently used books for our literacy programs.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="#contact" class="text-blue-600 font-medium inline-flex items-center">
+                        Contact us for fundraising support
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Make a Donation</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 text-lg text-gray-600">Your support helps children rise above their circumstances and reach new heights.</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-600 text-white p-8">
+                        <h3 class="text-2xl font-bold mb-4">Where Your Money Goes</h3>
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-blue-200 mt-1 mr-3">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Education Programs</h4>
+                                    <p class="text-blue-100 text-sm">$50 provides school supplies for one child</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-blue-200 mt-1 mr-3">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Mental Health Support</h4>
+                                    <p class="text-blue-100 text-sm">$100 funds a counseling session</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-blue-200 mt-1 mr-3">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Safe Housing</h4>
+                                    <p class="text-blue-100 text-sm">$250 provides a month of shelter</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 text-blue-200 mt-1 mr-3">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Nutrition</h4>
+                                    <p class="text-blue-100 text-sm">$30 feeds a child for a week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-blue-700 p-4 rounded-lg">
+                            <p class="text-blue-100"><i class="fas fa-info-circle mr-2"></i> KiteRise is a 501(c)(3) organization. Donations are tax-deductible to the extent allowed by law.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Donation Form</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2" for="amount">Donation Amount</label>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <button type="button" class="donation-option bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded transition">$25</button>
+                                    <button type="button" class="donation-option bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded transition">$50</button>
+                                    <button type="button" class="donation-option bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded transition">$100</button>
+                                    <button type="button" class="donation-option bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded transition">$250</button>
+                                    <button type="button" class="donation-option bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded transition">$500</button>
+                                    <button type="button" class="donation-option bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium py-2 px-4 rounded transition">Other</button>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2" for="frequency">Frequency</label>
+                                <div class="flex space-x-4">
+                                    <div class="flex items-center">
+                                        <input id="one-time" name="frequency" type="radio" class="h-4 w-4 text-blue-600 focus:ring-blue-500" checked>
+                                        <label for="one-time" class="ml-2 block text-gray-700">One-time</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input id="monthly" name="frequency" type="radio" class="h-4 w-4 text-blue-600 focus:ring-blue-500">
+                                        <label for="monthly" class="ml-2 block text-gray-700">Monthly</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2" for="designation">Designation (Optional)</label>
+                                <select id="designation" class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    <option>Where it's needed most</option>
+                                    <option>Education Programs</option>
+                                    <option>Mental Health Support</option>
+                                    <option>Safe Housing</option>
+                                    <option>Nutrition</option>
+                                    <option>Sponsor a Child</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2" for="name">Full Name</label>
+                                <input type="text" id="name" class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2" for="email">Email</label>
+                                <input type="email" id="email" class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label class="block text-gray-700 font-medium mb-2" for="payment">Payment Method</label>
+                                <div class="flex space-x-4 mb-4">
+                                    <button type="button" class="payment-method active bg-blue-600 text-white font-medium py-2 px-4 rounded transition">Credit Card</button>
+                                    <button type="button" class="payment-method bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded transition">PayPal</button>
+                                    <button type="button" class="payment-method bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded transition">M-Pesa</button>
+                                </div>
+                                
+                                <div id="credit-card-fields">
+                                    <div class="mb-4">
+                                        <label class="block text-gray-700 font-medium mb-2" for="card-number">Card Number</label>
+                                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-gray-700 font-medium mb-2" for="expiry">Expiry Date</label>
+                                            <input type="text" id="expiry" placeholder="MM/YY" class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                        <div>
+                                            <label class="block text-gray-700 font-medium mb-2" for="cvc">CVC</label>
+                                            <input type="text" id="cvc" placeholder="123" class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="mpesa-fields" class="hidden">
+                                    <div class="bg-green-50 p-4 rounded-lg mb-4">
+                                        <p class="text-green-800 text-sm">To donate via M-Pesa:</p>
+                                        <p class="font-bold mt-2">Paybill: 123456</p>
+                                        <p class="font-bold">Account: KiteRise</p>
+                                        <p class="text-sm mt-2">Or scan the QR code below:</p>
+                                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=MPESA_PAYBILL:123456_ACCOUNT:KiteRise" alt="M-Pesa QR Code" class="mt-2 mx-auto h-32 w-32">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105">
+                                Donate Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Success Stories</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-gray-500">See how KiteRise has helped children rise above their circumstances.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Story 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Maria's story" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Maria's Journey</h3>
+                        <p class="text-gray-600 mb-4">At 12, Maria was struggling in school and had lost hope for her future. Through our education program, she received tutoring and mentorship...</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Maria">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Maria</p>
+                                <p class="text-sm text-gray-500">Now in university studying nursing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="James's story" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">James Finds His Voice</h3>
+                        <p class="text-gray-600 mb-4">After years in foster care, James struggled with anger and isolation. Our mentorship program connected him with a stable adult role model...</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="James">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">James</p>
+                                <p class="text-sm text-gray-500">Now mentoring younger children</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Story 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Aisha's story" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Aisha's Art</h3>
+                        <p class="text-gray-600 mb-4">Aisha discovered her passion for painting through our arts program. Her work has now been featured in local galleries...</p>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Aisha">
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Aisha</p>
+                                <p class="text-sm text-gray-500">Art scholarship recipient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    Read More Stories
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog/Updates -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Latest Updates</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-gray-500">Stay informed about our work and the children we serve.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Summer camp" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>June 15, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Events</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Summer Camp Brings Joy to 75 Children</h3>
+                        <p class="text-gray-600 mb-4">Our annual summer camp provided a week of fun, learning, and new experiences for children from underserved communities...</p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">Read more <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Volunteers" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>May 28, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Volunteers</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Volunteer Spotlight: Meet Our Mentors</h3>
+                        <p class="text-gray-600 mb-4">This month we highlight three incredible mentors who have made a lasting impact on the children in our program...</p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">Read more <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2022&q=80" alt="Classroom" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>April 10, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span>Education</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">New Literacy Program Launches</h3>
+                        <p class="text-gray-600 mb-4">Thanks to a generous grant, we've expanded our education programs to include specialized literacy support for struggling readers...</p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">Read more <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition duration-300 transform hover:scale-105">
+                    View All Updates
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Contact Us</h2>
+                <div class="mt-4 h-1 w-20 bg-blue-600 mx-auto"></div>
+                <p class="mt-6 max-w-2xl mx-auto text-gray-500">We'd love to hear from you! Reach out with questions, partnership inquiries, or to learn more.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <select id="subject" name="subject" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                                <option>General Inquiry</option>
+                                <option>Volunteer Opportunity</option>
+                                <option>Partnership Inquiry</option>
+                                <option>Donation Question</option>
+                                <option>Media Request</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Other Ways to Reach Us</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Email</h4>
+                                    <p class="text-gray-600">info@kiterise.org</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Phone</h4>
+                                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Office</h4>
+                                    <p class="text-gray-600">123 Hope Street<br>Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-medium text-gray-900">Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9am - 5pm<br>Weekends: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-lg font-medium text-gray-900 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="h-10 w-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="h-10 w-10 rounded-full bg-red-500 text-white flex items-center justify-center hover:bg-red-600 transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-lg shadow-lg overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808559559897!2d36.82154831475393!3d-1.288385835980235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d664b2096f%3A0x9f5eef1d8a50d4a0!2sNairobi%20City%20Hall!5e0!3m2!1sen!2ske!4v1623941234567!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold mb-4">Stay Connected</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Subscribe to our newsletter for updates on our programs, success stories, and upcoming events.</p>
+            <form class="max-w-md mx-auto">
+                <div class="flex">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-900">
+                    <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-r-lg transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-blue-100 text-sm mt-3">We respect your privacy. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About KiteRise</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Mission</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Financials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Our Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Education</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mental Health</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Legal Advocacy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Arts & Sports</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Get Involved</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Volunteer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Donate</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Sponsor a Child</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Corporate Partnerships</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Use</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Child Protection</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tax Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img class="h-8 w-8 kite-float" src="https://img.icons8.com/color/96/kite.png" alt="KiteRise Logo">
+                    <span class="ml-2 text-xl font-bold">KiteRise Children's Foundation</span>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    © 2023 KiteRise Children's Foundation. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Payment method toggle
+        const paymentMethods = document.querySelectorAll('.payment-method');
+        const creditCardFields = document.getElementById('credit-card-fields');
+        const mpesaFields = document.getElementById('mpesa-fields');
+        
+        paymentMethods.forEach(method => {
+            method.addEventListener('click', () => {
+                // Remove active class from all buttons
+                paymentMethods.forEach(m => m.classList.remove('active', 'bg-blue-600', 'text-white'));
+                paymentMethods.forEach(m => m.classList.add('bg-gray-200', 'text-gray-800'));
+                
+                // Add active class to clicked button
+                method.classList.add('active', 'bg-blue-600', 'text-white');
+                method.classList.remove('bg-gray-200', 'text-gray-800');
+                
+                // Show corresponding fields
+                if (method.textContent.includes('Credit Card')) {
+                    creditCardFields.classList.remove('hidden');
+                    mpesaFields.classList.add('hidden');
+                } else if (method.textContent.includes('M-Pesa')) {
+                    creditCardFields.classList.add('hidden');
+                    mpesaFields.classList.remove('hidden');
+                } else {
+                    creditCardFields.classList.add('hidden');
+                    mpesaFields.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Donation amount selection
+        const donationOptions = document.querySelectorAll('.donation-option');
+        
+        donationOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                donationOptions.forEach(opt => opt.classList.remove('bg-blue-600', 'text-white'));
+                donationOptions.forEach(opt => opt.classList.add('bg-blue-100', 'text-blue-800'));
+                
+                option.classList.add('bg-blue-600', 'text-white');
+                option.classList.remove('bg-blue-100', 'text-blue-800');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                }
+            });
+        };
+        
+        // Set initial state
+        fadeElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transition = 'opacity 1.5s ease';
+        });
+        
+        // Check on load
+        window.addEventListener('load', fadeInOnScroll);
+        
+        // Check on scroll
+        window.addEventListener('scroll', fadeInOnScroll);
+    </script>
+</body>
+</html>
