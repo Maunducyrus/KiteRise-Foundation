@@ -58,3 +58,36 @@ body {
 .program-card {
     transition: all 0.3s ease;
 }
+
+.marquee-banner {
+  position: absolute;       
+  top: 0;                   
+  left: 0;
+  width: 100%;
+  background-color: #f87171; 
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  z-index: 60;              
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.marquee-banner p {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;       
+  animation: marquee 15s linear infinite;
+  font-size: 1.1rem;
+}
+
+/* marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
