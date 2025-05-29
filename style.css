@@ -91,3 +91,29 @@ body {
     transform: translateX(-100%);
   }
 }
+blockquote.text-gray-600 {
+    position: relative;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-left: 4px solid #e2e8f0;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+blockquote .founder {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: #3b82f6;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+blockquote .founder:hover {
+    color: #04c766;
+    text-decoration: underline;
+}
+blockquote.text-gray-600:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.3s ease;
+}
+
+
