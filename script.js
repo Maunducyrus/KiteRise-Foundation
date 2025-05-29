@@ -93,3 +93,21 @@
         
         // Check on scroll
         window.addEventListener('scroll', fadeInOnScroll);
+
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        function g() {
+  document.addEventListener("contextmenu", (e) => e.preventDefault()),
+    (document.onkeydown = function (e) {
+      if (
+        e.keyCode == 123 ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 73) ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 67) ||
+        (e.ctrlKey && e.shiftKey && e.keyCode == 74) ||
+        (e.ctrlKey && e.keyCode == 85)
+      )
+        return !1;
+    });
+}
+g();
+
